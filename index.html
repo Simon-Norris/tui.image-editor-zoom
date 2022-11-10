@@ -152,34 +152,6 @@
         
         new IEditorPanZoom(imageEditor).enable();
         
-        $(function(){
-            
-            
-            // FIX TOOLTIPS OVER SCROLLBAR
-            $('li.tui-image-editor-item').each(function(){
-                var text = $(this).attr('tooltip-content');
-                if(text){
-                    var el = $('<span class="tooltip" style="display: none">'+text+'</span>'); 
-                    $("body").append(el);
-                    $(this).data('c-tooltip', el);    
-                }
-                
-            });
-            
-          $('li.tui-image-editor-item').mouseover(function(event) {
-                 var el = $(this).data('c-tooltip');
-                 if(el){
-                     el.css('top', (event.pageY) + 'px');
-                     el.show();
-                 }
-
-             }).mouseleave(function() {
-                 var el = $(this).data('c-tooltip');
-                 if(el) $(this).data('c-tooltip').hide();
-             }) 
-            
-        })
-        
     </script>
 </body>
 </html>
