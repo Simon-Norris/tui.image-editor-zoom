@@ -69,7 +69,7 @@ function IEditorPanZoom(editor) {
         // Prevent scroll with wheel
         $('.tui-image-editor-wrap')[0].onwheel = function() { return false; };
         // Prevent overlapping from toolbar
-        $('.tui-image-editor-wrap').css('height', 'calc(100% - 150px)');
+        $('.tui-image-editor-wrap').css('height', '100%');
         
     };
 

@@ -57,35 +57,13 @@
     /* To prevent image jumping issue required to override top position of .tui-image-editor.*/
         
         .tui-image-editor {
-            top: 0px !important;
+            top: 0 !important;
         }
-        
-        .tui-image-editor-container .svg_ic-menu {
-/*            width: 24px;*/
-/*            height: 24px;*/
-        }
-        
-        .tui-image-editor-controls {
-            /*position: absolute;
-              display: block;
-              top: 0;
-              left: 0;
-              width: calc(120vw);
-              max-height: 750px;
-              margin: 0;
-              padding-top: 1px;
-              background: #abc;
-              overflow-y: auto;
-              overflow-x: hidden;
-              transform: rotate(-90deg) translateY(-100px);
-              transform-origin: right top;*/
-        }
-        
-        .tui-image-editor-controls > .card{
-              /*display: block;
-              transform: rotate(90deg);
-              transform-origin: right top; */
-        }
+
+    .tui-image-editor-main{
+        top: 0 !important;
+    }
+
         
         .tui-image-editor-container.left .tui-image-editor-controls {
             width: 64px;
@@ -157,9 +135,10 @@
 //                    path: 'img/sampleImage2.png' ,
                     name: 'SampleImage'
                 , }
-                , theme: blackTheme, // or whiteTheme
-                initMenu: 'draw'
-                , menuBarPosition: 'bottom'
+                ,theme: {
+                    "header.display": "none",
+                }
+                , menuBarPosition: 'left'
             , }
             , cssMaxWidth: 700
             , cssMaxHeight: 500
